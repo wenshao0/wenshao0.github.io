@@ -65,6 +65,41 @@
   }
 }
 
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.blog-title {
+  font-size: 1.2rem;
+  margin: 0.2rem 0 0.6rem;
+}
+
+.blog-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+.blog-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .experience-heading-text {
     font-size: 30px;

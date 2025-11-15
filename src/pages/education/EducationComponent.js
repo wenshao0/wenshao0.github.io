@@ -16,35 +16,21 @@ class Education extends Component {
     const theme = this.props.theme;
     return (
       <div className="education-main">
-        <Header theme={this.props.theme} />
+        {/* <Header theme={this.props.theme} /> */}
+
         <div className="basic-education">
-          <Fade bottom duration={2000} distance="40px">
-            <div className="heading-div">
-              <div className="heading-img-div">
-                {/* <img
-									src={require("../../assets/images/education.svg")}
-									alt=""
-								/> */}
-                <EducationImg theme={theme} />
-              </div>
-              <div className="heading-text-div">
-                <h1 className="heading-text" style={{ color: theme.text }}>
-                  Education
-                </h1>
-                <h3 className="heading-sub-text" style={{ color: theme.text }}>
-                  Basic Qualification and Certifcations
-                </h3>
-                <CompetitiveSites logos={competitiveSites.competitiveSites} />
-              </div>
-            </div>
-          </Fade>
+          {/* 顶部大帽子 + “Basic Qualification and Certifications” 整块删掉 */}
+          {/* 只保留学位列表 */}
           <Educations theme={this.props.theme} />
-          {certifications.certifications.length > 0 ? (
-            <Certifications theme={this.props.theme} />
-          ) : null}
         </div>
-        <Footer theme={this.props.theme} />
-        <TopButton theme={this.props.theme} />
+
+        {/* 如果不想显示证书列表，整个块直接删掉即可 */}
+        {/* {certifications.certifications.length > 0 ? (
+          <Certifications theme={this.props.theme} />
+        ) : null} */}
+
+        {/* <Footer theme={this.props.theme} />
+        <TopButton theme={this.props.theme} /> */}
       </div>
     );
   }
