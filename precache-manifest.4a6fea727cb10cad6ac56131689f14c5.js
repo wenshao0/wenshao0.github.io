@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "693065af226132394cbf426b89337b58",
+    "revision": "526510c6f9b676f81ea3906b8797afa3",
     "url": "/index.html"
   },
   {
-    "revision": "516389b436cf60376b58",
-    "url": "/static/css/main.c03488fb.chunk.css"
+    "revision": "6f61072b8b3543733ca0",
+    "url": "/static/css/main.039ac952.chunk.css"
   },
   {
-    "revision": "8f1f8b7d9cd1d9b77401",
-    "url": "/static/js/2.34a17b1f.chunk.js"
+    "revision": "5901f91ed8019eaa85b0",
+    "url": "/static/js/2.5a5331a2.chunk.js"
   },
   {
-    "revision": "516389b436cf60376b58",
-    "url": "/static/js/main.d2509a12.chunk.js"
+    "revision": "6f61072b8b3543733ca0",
+    "url": "/static/js/main.4fdce675.chunk.js"
   },
   {
     "revision": "f4163cc1361175add5e6",
@@ -66,6 +66,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "058eca4cbdc03a1dad9a6bb943ac7831",
     "url": "/static/media/blogs_image.058eca4c.svg"
+  },
+  {
+    "revision": "d2884f39f0489016e936edd100e2b8aa",
+    "url": "/static/media/bytedance_logo.d2884f39.png"
   },
   {
     "revision": "ad079d775722b5445b6cb1dd4ccaf4a1",
@@ -242,6 +246,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3fa5424232370e3d049c9555d9c440a4",
     "url": "/static/media/talksCardBackAlt.3fa54242.svg"
+  },
+  {
+    "revision": "369e051869005491b0122471adf609f3",
+    "url": "/static/media/tcci_logo.369e0518.png"
+  },
+  {
+    "revision": "ca90550a29cca8b82eb29a1b7760fb47",
+    "url": "/static/media/thepaper_logo.ca90550a.png"
   },
   {
     "revision": "0993e3246bf5146154391a0afef79b03",
