@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shoulder Season - Wen Shao</title>
+    <style>
+        /* Inherit Core Variables & Reset */
+        :root {
+            --bg-color: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-body: #4a4a4a;
+            --text-light: #888888;
+            --font-heading: 'Georgia', 'Times New Roman', serif;
+            --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --nav-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-body);
+            line-height: 1.8;
+            /* Improved reading line-height */
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Navigation */
+        .navbar {
+            height: var(--nav-height);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--text-dark);
+        }
+
+        .nav-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            color: var(--text-body);
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text-dark);
+        }
+
+        /* Article Content */
+        .article-wrapper {
+            max-width: 720px;
+            /* Optimal reading width */
+            margin: 0 auto;
+            padding: 160px 20px 100px;
+        }
+
+        .article-header {
+            margin-bottom: 60px;
+            text-align: left;
+        }
+
+        .article-meta {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .article-title {
+            font-family: var(--font-heading);
+            font-size: 48px;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .article-body {
+            font-size: 18px;
+            color: var(--text-body);
+        }
+
+        .article-body p {
+            margin-bottom: 28px;
+        }
+
+        /* Back Link */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 40px;
+            font-size: 14px;
+            color: var(--text-light);
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 80px 5%;
+            text-align: center;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Footer CTA Button */
+        .cta-button {
+            display: inline-block;
+            background-color: #E55039;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+            background-color: #C0392B;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .social-link {
+            font-size: 14px;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .social-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: currentColor;
+            bottom: -2px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .social-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="static/media/weblogo.a16efda16ec0e0210920.png" alt="" class="nav-logo">
+            <span>Wen Shao</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="https://www.linkedin.com/in/wen-shao" target="_blank">LinkedIn</a></li>
+            <li><a href="articles.html" class="active">Articles</a></li>
+        </ul>
+    </nav>
+
+    <main class="article-wrapper">
+        <a href="articles.html" class="back-link">&larr; Back to Articles</a>
+
+        <header class="article-header">
+            <div class="article-meta">Narrative • March 2024</div>
+            <h1 class="article-title">The Shoulder Season</h1>
+        </header>
+
+        <article class="article-body">
+            <p>Late March at Sugar Pine Point felt strangely weightless, as if the season had not committed to itself
+                yet. Snow clung in the shadows, the air softened by the first hints of thaw, and the trails were quiet
+                in a way that felt older than winter. My friend and I walked without speaking much. The forest seemed to
+                prefer it that way. When the trees opened, Tahoe appeared in a blue so sudden it almost startled us. The
+                stillness felt perfect, a little too perfect, as if nothing in it could possibly go wrong.</p>
+
+            <p>Yet, this seasonal lull known as the "shoulder season" is deceptive. While the Tahoe Basin welcomes
+                millions of tourists annually, the quiet weeks between ski season and summer crowds belong to the waking
+                wild. In late March, the region’s black bears begin emerging from months of torpor, driven by a
+                biological imperative to replenish calories lost during winter. For visitors lulled into a false sense
+                of solitude, the boundary between a curated state park and the indifferent, hungry force of nature can
+                vanish in an instant.</p>
+
+            <p>We stepped onto the pier, its boards stiff with leftover cold. From there the lake looked even larger, a
+                flat and trembling sheet that made the shoreline seem impossibly far. I remember feeling strangely
+                exposed despite the calm. Nothing suggested danger, yet a thin prickle of awareness rose under my skin.
+                Maybe it was the emptiness of the park, or the way the wind shifted without warning, or the quiet that
+                had gone on a little too long. I lifted my orange juice can and caught its sharp sweetness in the cold
+                air, a note so familiar and out of place it made me aware of how much of the city I had carried with me.
+            </p>
+
+            <p>The moment held for a long time, long enough for my shoulders to loosen. Then the quiet snapped. A
+                frantic barking tore across the trees behind us. I turned toward the slope, expecting a dog. Instead, a
+                shape, brown and heavy, shifted against the hillside. A bear. He was swaying groggily toward a trash bin
+                near the Hellman-Ehrman estate grounds. His coat looked dull in patches, a common sign of a male bear
+                recently emerged from hibernation, likely having lost up to 30 percent of his body weight during the
+                winter fast. When he leaned his weight into the bin, the metal made a thin scraping complaint that
+                carried across the lake.</p>
+
+            <p>It took a few seconds for my mind to catch up. The bear was between us and the path that led back to the
+                shore. He was not blocking it on purpose but simply by existing where he was. The pier suddenly felt
+                narrower than before, its long empty stretch pointing us toward an exit we could no longer use. Water on
+                three sides, a feeding bear on the fourth. Instead of panic, a blankness settled in my mind, as if I
+                were waiting for the situation to arrange itself into something more familiar. In the city, danger
+                announces itself with cues and explanations. Out here there were none, only the cold and the fact of
+                him.</p>
+
+            <p>We backed away from the open edge of the pier as quietly as we could, though the bear still had not
+                looked up. A small wooden shed jutted from the right side, something we had walked past without noticing
+                earlier, and now it offered the only scrap of cover in the wide, exposed space.</p>
+
+            <p>We slipped behind it, the cold wood pressing through our jackets, and for a moment I could not tell what
+                I was supposed to feel. Part of me kept waiting for the situation to settle into something familiar,
+                something I could reason about: threat levels, escape routes, cause and effect. But the rest of me, the
+                part without a name for any of this, had already gone still. My friend murmured something, maybe
+                reassurance or maybe nothing at all, but the wind pulled it apart before I could understand it.</p>
+
+            <p>After a minute that stretched thin, I leaned out just enough to see past the corner of the shed. The
+                slope was there, the small house, the bin, everything unchanged, but the bear was gone.</p>
+
+            <p>For several seconds my mind refused to accept it. I scanned the hillside, waiting for the shape to
+                reappear. But there was only stillness. A chill moved up my spine that had nothing to do with the wind.
+                Somehow seeing nothing was worse. When he was in sight, the danger had somewhere to stand.</p>
+
+            <p>We exchanged a look, the kind that does not ask a question but acknowledges that there was nothing else
+                to do. Moving felt dangerous, but staying felt worse. We edged out from behind the shed, one careful
+                step at a time, trying to make ourselves smaller without knowing how. The boards creaked under our shoes
+                with exaggerated clarity. At the point where the pier rejoined the path, we turned slowly, as if speed
+                alone might change what waited there. And then the world closed in. The bear sat squarely in the narrow
+                walkway, not charging or growling, only present, his dark eyes catching the thin shimmer of the lake.
+            </p>
+
+            <p>For a heartbeat I could not breathe. The distance between us was no longer distance but a fact we had
+                wandered into without permission. Civilization felt like a shell I had stepped out of without noticing,
+                and without it everything became brutally simple. He could end us if he wanted to, and he did not need a
+                reason.</p>
+
+            <p>I eased myself backward until his gaze slipped out of view. My breathing returned in thin, uneven
+                threads. My hand brushed something cold, and I looked down as if seeing it for the first time. The
+                orange juice can, bright and absurd, was still clenched in my fingers. A smear of citrus scent lifted
+                into the air.</p>
+
+            <p>Tahoe wildlife guidelines warn that even small traces of sugary drinks can travel surprisingly far in
+                cold air, drawing bears long before hikers see them. The recognition settled quietly. Of course he was
+                here. The sweetness that felt harmless minutes ago was a signal I had not known I was sending. The
+                absurdity of it settled around me, two people cornered by an animal responding to a scent we had stopped
+                noticing.</p>
+
+            <p>I held the can away from my body, not as a plan but as an instinct, something small and almost
+                apologetic. The bear shifted again, not toward us but with the slow turn of a creature guided by its own
+                rhythm. He inhaled once, then let his focus drift back to the trash bin, following the logic of hunger
+                and season.</p>
+
+            <p>Relief did not come. What settled over me instead was a quiet clarity. He was not threatening us or
+                sparing us or doing anything that fit into the vocabulary I knew. He was simply living his life, and we
+                had stepped into the radius of his world without understanding its rules. My friend met my eyes, and in
+                that brief exchange I felt the same realization forming in both of us: how easily we forget that most of
+                the earth belongs to everything but us.</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <a href="https://www.linkedin.com/in/wen-shao" target="_blank" class="cta-button">Let's connect!</a>
+        <div class="social-links">
+            <a href="mailto:wenshao49@gmail.com" class="social-link">Email</a>
+        </div>
+        <br>
+        <p>&copy; 2024 Wen Shao. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
