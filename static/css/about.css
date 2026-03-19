@@ -1,0 +1,113 @@
+.main-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 140px 20px 100px;
+}
+
+.page-header {
+    margin-bottom: 80px;
+    text-align: left;
+}
+
+.page-title {
+    margin-bottom: 24px;
+    color: var(--text-dark);
+    font-family: var(--font-heading);
+    font-size: 48px;
+}
+
+.page-intro {
+    color: var(--text-body);
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.resume-section {
+    margin-bottom: 80px;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    color: var(--text-light);
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.resume-item {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.resume-date {
+    width: 150px;
+    flex-shrink: 0;
+    color: var(--text-light);
+    font-size: 15px;
+    font-variant-numeric: tabular-nums;
+}
+
+.resume-content {
+    flex: 1;
+}
+
+.resume-role {
+    margin-bottom: 4px;
+    color: var(--text-dark);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.resume-org {
+    margin-bottom: 12px;
+    color: var(--text-body);
+    font-size: 16px;
+}
+
+.resume-org-link {
+    text-decoration: underline;
+}
+
+.resume-org-with-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.resume-org-logo {
+    width: auto;
+    height: 32px;
+}
+
+.resume-desc {
+    color: var(--text-body);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.resume-list {
+    margin-top: 8px;
+    margin-left: 18px;
+    color: var(--text-body);
+    font-size: 15px;
+    list-style: disc;
+}
+
+.resume-list li + li {
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .resume-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .resume-date {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+}

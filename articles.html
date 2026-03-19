@@ -5,327 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles - Wen Shao</title>
+    <meta name="description" content="Selected reporting, essays, and articles by Wen Shao.">
+    <link rel="icon" href="static/site/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="static/site/logo192.png">
+    <link rel="manifest" href="static/site/manifest.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@300;400;500;600&display=swap"
         rel="stylesheet">
-    <style>
-        /* Base Styles */
-        :root {
-            --body-bg: #f2f2f2;
-            --card-bg: #ffffff;
-            --text-dark: rgb(70, 73, 71);
-            --text-body: #555555;
-            --text-light: #888888;
-            --font-heading: 'Libre Baskerville', serif;
-            --font-body: 'Work Sans', sans-serif;
-            --nav-height: 100px;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background-color: var(--body-bg);
-            color: var(--text-body);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: opacity 0.3s ease;
-        }
-
-        a:hover {
-            opacity: 0.6;
-        }
-
-        /* Navbar */
-        .navbar {
-            height: var(--nav-height);
-            padding: 0 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1440px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 100;
-        }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 20px;
-            font-weight: 500;
-            color: var(--text-dark);
-        }
-
-        .nav-logo {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 50px;
-        }
-
-        .nav-links a {
-            font-size: 18px;
-            color: var(--text-dark);
-            font-weight: 600;
-        }
-
-        .nav-links a.active {
-            opacity: 1;
-        }
-
-        /* Main Container */
-        .main-wrapper {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 0 5%;
-        }
-
-        /* Hero Scope */
-        .hero-section {
-            min-height: 40vh;
-            /* Reduced height for articles page */
-            display: flex;
-            align-items: center;
-            padding: 10px 0 30px;
-        }
-
-        .hero-card {
-            background-color: var(--card-bg);
-            border-radius: 32px;
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            /* Left align */
-            align-items: center;
-            padding: 60px 80px;
-            gap: 80px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-text {
-            width: 100%;
-            max-width: 800px;
-            z-index: 10;
-        }
-
-        .hero-greeting {
-            font-size: 14px;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            margin-bottom: 30px;
-            display: block;
-            font-weight: 600;
-        }
-
-        .hero-title {
-            font-family: var(--font-heading);
-            font-size: 64px;
-            /* Slightly smaller than home */
-            color: var(--text-dark);
-            line-height: 1.05;
-            margin-bottom: 20px;
-        }
-
-        .hero-desc {
-            font-size: 20px;
-            color: var(--text-body);
-            line-height: 1.6;
-            max-width: 600px;
-            font-weight: 400;
-        }
-
-        /* Featured Work Section */
-        .featured-section {
-            padding: 0 0 100px;
-        }
-
-        .section-header {
-            font-family: var(--font-heading);
-            font-size: 32px;
-            color: var(--text-dark);
-            margin-bottom: 40px;
-            padding-left: 10px;
-        }
-
-        .projects-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 60px;
-            /* Reduced gap for articles */
-            padding: 40px 10px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .project-card {
-            background-color: transparent;
-            border-radius: 0;
-            padding: 0;
-            margin: 0;
-            box-shadow: none;
-            display: block;
-            text-decoration: none;
-            color: inherit;
-            width: 100%;
-        }
-
-        .project-content-wrapper {
-            display: flex;
-            flex-direction: row;
-            gap: 40px;
-            align-items: flex-start;
-            /* Align top for articles */
-        }
-
-        /* For articles, we keep image on left always or standard list style */
-        /* Overriding the alternating order for articles list for consistency */
-        .project-card:nth-child(even) .project-content-wrapper {
-            flex-direction: row;
-        }
-
-        .project-info {
-            width: 100%;
-            /* Full width if no image, or adjust */
-            padding: 10px 0;
-        }
-
-        .project-tag {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: #E55039;
-            /* Accent color */
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .project-title {
-            font-family: var(--font-heading);
-            font-size: 36px;
-            color: var(--text-dark);
-            margin-bottom: 16px;
-            line-height: 1.2;
-            font-weight: 400;
-        }
-
-        .project-excerpt {
-            font-size: 18px;
-            color: var(--text-body);
-            line-height: 1.7;
-            margin-bottom: 24px;
-            max-width: 800px;
-            display: block;
-        }
-
-        .project-link-text {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-dark);
-            text-decoration: none;
-            border-bottom: 1px solid currentColor;
-            padding-bottom: 2px;
-            width: fit-content;
-            transition: opacity 0.2s;
-        }
-
-        .project-card:hover .project-link-text {
-            opacity: 0.7;
-        }
-
-        /* Footer */
-        .cta-button {
-            display: inline-block;
-            background-color: #E55039;
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 32px;
-            transition: transform 0.2s ease, opacity 0.2s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
-            background-color: #C0392B;
-        }
-
-        .footer {
-            padding: 80px 5%;
-            text-align: center;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .social-link {
-            font-size: 14px;
-            color: var(--text-dark);
-            position: relative;
-        }
-
-        .social-link::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            background: currentColor;
-            bottom: -2px;
-            left: 0;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease;
-        }
-
-        .social-link:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-    </style>
+    <link rel="stylesheet" href="static/css/portfolio-base.css">
+    <link rel="stylesheet" href="static/css/articles.css">
 </head>
 
 <body>
 
     <nav class="navbar">
         <a href="index.html" class="nav-brand">
-            <img src="static/media/weblogo.a16efda16ec0e0210920.png" alt="" class="nav-logo">
+            <img src="static/media/weblogo.a16efda16ec0e0210920.png" alt="Wen Shao logo" class="nav-logo">
             <span>Wen Shao</span>
         </a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="https://www.linkedin.com/in/wen-shao" target="_blank">LinkedIn</a></li>
-            <li><a href="articles.html" class="active">Articles</a></li>
+            <li><a href="https://www.linkedin.com/in/wen-shao" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="articles.html" class="active" aria-current="page">Articles</a></li>
         </ul>
     </nav>
 
@@ -380,7 +84,7 @@
     </main>
 
     <footer class="footer">
-        <a href="https://www.linkedin.com/in/wen-shao" target="_blank" class="cta-button">Let's connect!</a>
+        <a href="https://www.linkedin.com/in/wen-shao" target="_blank" rel="noopener noreferrer" class="cta-button">Let's connect!</a>
         <div class="social-links">
             <a href="mailto:wenshao49@gmail.com" class="social-link">Email</a>
         </div>

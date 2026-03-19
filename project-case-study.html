@@ -5,286 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile App Redesign - UX Case Study</title>
+    <meta name="description" content="A UX case study template for Wen Shao's project work.">
+    <link rel="icon" href="static/site/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="static/site/logo192.png">
+    <link rel="manifest" href="static/site/manifest.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <style>
-        /* Reset & Base Styles */
-        :root {
-            --primary-bg: #edf9fe;
-            --text-dark: #0a214c;
-            --text-body: #3b4d63;
-            --text-light: #6f7780;
-            --accent: #dd6b5a;
-            --accent-hover: #c85d4f;
-            --white: #ffffff;
-            --font-heading: 'Libre Baskerville', serif;
-            --font-body: 'Work Sans', sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--text-body);
-            line-height: 1.6;
-            background-color: var(--white);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: opacity 0.2s ease;
-        }
-
-        a:hover {
-            opacity: 0.7;
-        }
-
-        /* Navigation */
-        .navbar {
-            background: var(--primary-bg);
-            padding: 28px 0;
-            width: 100%;
-        }
-
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1400px;
-            width: 92%;
-            margin: 0 auto;
-        }
-
-        .nav-name {
-            font-family: var(--font-body);
-            font-weight: 500;
-            font-size: 25px;
-            color: var(--text-dark);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 42px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-family: var(--font-body);
-            font-size: 20px;
-            color: var(--text-body);
-            font-weight: 400;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: var(--primary-bg);
-            padding: 60px 0 100px;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .hero-topline {
-            color: var(--text-light);
-            font-size: 18px;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .hero-title {
-            font-family: var(--font-heading);
-            font-size: 64px;
-            color: var(--text-dark);
-            line-height: 1.1;
-            margin-bottom: 30px;
-        }
-
-        .hero-subtitle {
-            font-size: 24px;
-            max-width: 700px;
-            margin: 0 auto 60px;
-            color: var(--text-body);
-        }
-
-        .hero-image-placeholder {
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
-            border-radius: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-dark);
-            font-size: 24px;
-            font-weight: 500;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-            margin-top: 40px;
-        }
-
-        /* Content Sections */
-        .section {
-            padding: 100px 0;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .grid-overview {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 80px;
-            padding-bottom: 60px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .overview-item h3 {
-            font-size: 16px;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 12px;
-        }
-
-        .overview-item p {
-            font-size: 20px;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        .content-block {
-            margin-bottom: 100px;
-        }
-
-        .section-title {
-            font-family: var(--font-heading);
-            font-size: 42px;
-            color: var(--text-dark);
-            margin-bottom: 32px;
-        }
-
-        .text-body {
-            font-size: 20px;
-            margin-bottom: 24px;
-            max-width: 800px;
-        }
-
-        .image-block {
-            margin: 60px 0;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .placeholder-img {
-            width: 100%;
-            height: 400px;
-            background: #f7f8f9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 18px;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .stat-card {
-            background: #f7f9fc;
-            padding: 40px;
-            border-radius: 16px;
-            text-align: center;
-        }
-
-        .stat-number {
-            display: block;
-            font-size: 48px;
-            font-family: var(--font-heading);
-            color: var(--accent);
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-size: 18px;
-            color: var(--text-body);
-        }
-
-        /* Footer */
-        .footer {
-            background: #f7f7f7;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .footer-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--accent);
-            color: var(--white);
-            padding: 18px 48px;
-            border-radius: 18px;
-            font-size: 20px;
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-
-        .footer-btn:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-            opacity: 1;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 42px;
-            }
-
-            .nav-links {
-                display: none;
-                /* Simple hide for mobile for this template */
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="static/css/project.css">
 </head>
 
 <body>
 
     <nav class="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="nav-name">Wenshao</a>
+            <a href="index.html" class="nav-name">Wen Shao</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="index.html#projects">Projects</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
@@ -339,7 +79,7 @@
                     engagement and satisfaction.
                 </p>
                 <div class="image-block">
-                    <div class="placeholder-img" style="background: #eef2f6;">
+                    <div class="placeholder-img placeholder-img--cool">
                         [Solution High-Fidelity Mockups]
                     </div>
                 </div>
@@ -352,7 +92,7 @@
                     pain points, followed by rapid wireframing and iterative testing.
                 </p>
                 <div class="image-block">
-                    <div class="placeholder-img" style="background: #fff0f0;">
+                    <div class="placeholder-img placeholder-img--warm">
                         [Process / Wireframes Image]
                     </div>
                 </div>
@@ -384,8 +124,8 @@
 
     <footer class="footer">
         <div class="container">
-            <h2 class="section-title" style="font-size: 36px;">Want to see more?</h2>
-            <p class="text-body" style="margin: 0 auto 40px;">Check out my other projects or get in touch.</p>
+            <h2 class="section-title footer-title">Want to see more?</h2>
+            <p class="text-body footer-copy">Check out my other projects or get in touch.</p>
             <a href="index.html" class="footer-btn">Back to Portfolio</a>
         </div>
     </footer>

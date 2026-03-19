@@ -1,0 +1,259 @@
+.hero-section {
+    display: flex;
+    align-items: center;
+    min-height: calc(50vh - var(--nav-height));
+    padding: 10px 0 30px;
+}
+
+.hero-card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+    padding: 20px 40px;
+    border-radius: 32px;
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.hero-text {
+    z-index: 10;
+    flex: 0 1 auto;
+    width: 50%;
+    max-width: 550px;
+}
+
+.hero-greeting {
+    display: block;
+    margin-bottom: 30px;
+    color: var(--text-light);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    margin-bottom: 40px;
+    color: var(--text-dark);
+    font-family: var(--font-heading);
+    font-size: 82px;
+    line-height: 1.05;
+}
+
+.hero-title br {
+    display: block;
+}
+
+.hero-desc {
+    max-width: 480px;
+    color: var(--text-body);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.hero-portrait-container {
+    position: relative;
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+}
+
+.hero-portrait-img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    transform: translateY(10px);
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+.featured-section {
+    padding: 0 0 100px;
+}
+
+.section-header {
+    margin-bottom: 40px;
+    padding-left: 10px;
+    color: var(--text-dark);
+    font-family: var(--font-heading);
+    font-size: 32px;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 10px;
+}
+
+.project-card {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.project-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+}
+
+.project-card:nth-child(even) .project-content-wrapper {
+    flex-direction: row-reverse;
+}
+
+.project-image-placeholder {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover .project-image-placeholder {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.project-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-image-placeholder img {
+    transform: scale(1.03);
+}
+
+.project-info {
+    width: 45%;
+    padding: 20px;
+}
+
+.project-tag {
+    display: block;
+    margin-bottom: 16px;
+    color: #666;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.project-title {
+    margin-bottom: 24px;
+    color: var(--text-dark);
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.project-excerpt {
+    display: block;
+    max-width: 480px;
+    margin-bottom: 32px;
+    color: var(--text-body);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.project-link-text {
+    width: fit-content;
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+    color: var(--text-dark);
+    font-size: 15px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.project-card:hover .project-link-text {
+    opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+    .project-content-wrapper,
+    .project-card:nth-child(even) .project-content-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        height: auto;
+        padding: 0;
+    }
+
+    .project-image-placeholder {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .projects-grid {
+        gap: 80px;
+        padding: 0 20px;
+    }
+
+    .hero-card {
+        flex-direction: column;
+        gap: 20px;
+        padding: 60px 30px;
+        text-align: center;
+    }
+
+    .hero-text {
+        display: contents;
+    }
+
+    .hero-greeting {
+        order: 1;
+    }
+
+    .hero-title {
+        order: 2;
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+
+    .hero-portrait-container {
+        order: 3;
+        justify-content: center;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .hero-desc {
+        order: 4;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .project-title {
+        font-size: 36px;
+    }
+
+    .project-info {
+        padding: 0;
+    }
+}
