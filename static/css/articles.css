@@ -135,6 +135,70 @@
     opacity: 0.7;
 }
 
+.article-roadmap {
+    margin-top: 24px;
+    padding: 48px;
+    border: 1px solid rgba(70, 73, 71, 0.08);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.article-roadmap-header {
+    max-width: 720px;
+    margin-bottom: 28px;
+}
+
+.article-roadmap-title {
+    margin-bottom: 14px;
+    color: var(--text-dark);
+    font-family: var(--font-heading);
+    font-size: 30px;
+}
+
+.article-roadmap-copy {
+    color: var(--text-body);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.article-draft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.article-draft-card {
+    padding: 24px;
+    border: 1px solid rgba(70, 73, 71, 0.1);
+    border-radius: 20px;
+    background: #fff;
+}
+
+.article-draft-label {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--text-light);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.article-draft-card h3 {
+    margin-bottom: 12px;
+    color: var(--text-dark);
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.article-draft-card p {
+    color: var(--text-body);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
 @media (max-width: 768px) {
     .hero-card {
         padding: 40px 28px;
@@ -146,5 +210,13 @@
 
     .project-title {
         font-size: 30px;
+    }
+
+    .article-roadmap {
+        padding: 32px 24px;
+    }
+
+    .article-draft-grid {
+        grid-template-columns: 1fr;
     }
 }
