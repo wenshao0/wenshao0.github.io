@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navitas AI Power Bet</title>
+  <meta name="description"
+    content="A cinematic editorial hero for a multimedia article about Navitas, AI data centers, and the power race.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Montserrat:wght@400;700;900&family=Playfair+Display:wght@900&family=Urbanist:wght@400;700;900&family=Roboto+Mono&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: "#f2ebdf",
+            charcoal: "#111413",
+            slate: "#45515a",
+            electric: "#2f8fe3",
+          },
+          fontFamily: {
+            sans: ["Montserrat", "ui-sans-serif", "system-ui", "sans-serif"],
+            serif: ["Playfair Display", "serif"],
+            urbanist: ["Urbanist", "sans-serif"],
+            mono: ["Roboto Mono", "monospace"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #f2ebdf;
+      font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+    }
+
+    body {
+      overflow-x: hidden;
+      color: #111413;
+    }
+
+    /* Neutral Fidelity Rendering - 4K Crisp edges */
+    .editorial-neutral {
+      image-rendering: -webkit-optimize-contrast;
+      filter: contrast(1.08) brightness(1.0) saturate(1.0) !important;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+
+    /* Infinite Horizon Overlays */
+    #editorial-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 30;
+      pointer-events: none;
+      background:
+        linear-gradient(to bottom, rgba(47, 143, 227, 0.03) 0%, transparent 35%),
+        linear-gradient(to top, rgba(0, 0, 0, 0.15) 0%, transparent 15%),
+        radial-gradient(circle at 75% 25%, transparent 60%, rgba(0, 0, 0, 0.1) 100%);
+    }
+
+    .editorial-headline {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 6.5vw, 6.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-wrap: balance;
+    }
+
+    #audio-nudge {
+      animation: nudge-fade 3s infinite;
+    }
+
+    @keyframes nudge-fade {
+      0%,
+      100% {
+        opacity: 0.4;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* Dropcap Styling */
+    .editorial-dropcap::first-letter {
+      float: left;
+      font-family: 'Playfair Display', serif;
+      font-size: 5.5rem;
+      font-weight: 900;
+      line-height: 0.8;
+      margin-top: 0.15rem;
+      margin-right: 0.75rem;
+      color: #1a1a1a;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body class="bg-[#f2ebdf]">
+  <main>
+    <!-- Hero Section: The Masterpiece Arrival -->
+    <section class="relative h-[600vh]" id="hero-main">
+      <div class="sticky top-0 h-screen w-screen overflow-hidden bg-black" id="hero-viewport">
+
+        <div id="editorial-overlay"></div>
+
+        <!-- Layer 1: Hardware-Accelerated Video (Visual Sanctuary on the Left) -->
+        <div class="absolute inset-0 z-10 bg-black flex items-center justify-center" id="video-container">
+          <video id="hero-video" class="h-full w-full object-contain md:object-cover editorial-neutral" playsinline
+            muted preload="auto" src="./hero-descent.mp4"></video>
+        </div>
+
+        <!-- Typography: Right-Pinned Column Strategy (Occupies only the far right 30%) -->
+        <div class="absolute right-[5vw] top-[12vh] z-40 w-full max-w-[60vw] px-4 text-right">
+          <div id="premium-headline-container" class="opacity-0 translate-y-4">
+            <h1 class="editorial-headline text-black">
+              Navitas Worth $3.5 Billion on<br>
+              $50 Million Sales in AI Power Bet
+            </h1>
+          </div>
+        </div>
+
+        <!-- Audio Awakening UI: The Handshake -->
+        <div id="audio-awakening"
+          class="absolute inset-0 z-50 flex items-center justify-center cursor-pointer bg-black/10 transition-opacity duration-700">
+          <div class="text-center group">
+            <div id="audio-nudge" class="text-white/40 text-[10px] uppercase font-black tracking-[0.4em] mb-4">Click to
+              awaken immersive experience</div>
+            <div
+              class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white/20 group-hover:border-white/60 group-hover:text-white/60 transition-all">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 3v18l-7-7H3V10h2l7-7zm6.5 9c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM16 4.45v2.06c2.36.86 4 3.12 4 5.76s-1.64 4.9-4 5.76v2.06c3.47-.91 6-4.05 6-7.82s-2.53-6.91-6-7.82z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subtle Audio Control Status -->
+        <button id="audio-toggle"
+          class="absolute bottom-12 right-12 z-50 flex items-center gap-4 bg-black/40 hover:bg-black/60 backdrop-blur-xl px-6 py-3 rounded-full border border-white/10 transition-all duration-500 opacity-0 pointer-events-none">
+          <div id="audio-status-text" class="text-white text-[9px] uppercase font-black tracking-[0.2em]">Immersive
+            Audio</div>
+          <div id="audio-icon" class="text-white/60">
+            <svg id="icon-unmuted" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z">
+              </path>
+            </svg>
+            <svg id="icon-muted" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z">
+              </path>
+            </svg>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- Slide 2: The Divergence (Market Performance) -->
+    <section class="relative h-[250vh] bg-[#020302]" id="divergence-section">
+      <div class="sticky top-0 h-screen flex items-center justify-center overflow-hidden px-6">
+        <div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="z-10">
+            <p class="editorial-headline text-white mb-8">The Great<br>Divergence</p>
+            <p class="text-white/60 text-lg max-w-md leading-relaxed">
+              While the semiconductor sector rose 60.94%, Navitas delivered an astronomical <span
+                class="text-[#f18b11] font-bold">144.40% return</span>, detaching itself from all traditional
+              benchmarks.
+            </p>
+          </div>
+
+          <div class="relative h-[50vh] w-full bg-[#050605] border border-white/5 rounded-xl p-8 overflow-hidden">
+            <!-- Grid Lines -->
+            <div class="absolute inset-0 opacity-10 pointer-events-none"
+              style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 50px 50px;">
+            </div>
+
+            <svg class="w-full h-full overflow-visible" viewBox="0 0 1000 500" preserveAspectRatio="none">
+              <!-- RTY Index (Blue) -->
+              <path class="path-rty" d="M0,450 L200,440 L400,445 L600,430 L800,410 L1000,400" fill="none"
+                stroke="#2f8fe3" stroke-width="3" stroke-dasharray="1000" stroke-dashoffset="1000" pathLength="1000" />
+              <!-- Semiconductor Index (White) -->
+              <path class="path-semi" d="M0,450 L200,420 L400,380 L600,320 L800,280 L1000,240" fill="none"
+                stroke="white" stroke-width="3" stroke-dasharray="1000" stroke-dashoffset="1000" pathLength="1000" />
+              <!-- NVTS (Orange) -->
+              <path class="path-nvts" d="M0,450 L200,430 L400,400 L600,380 L800,150 L1000,50" fill="none"
+                stroke="#f18b11" stroke-width="6" stroke-dasharray="1000" stroke-dashoffset="1000" pathLength="1000" />
+            </svg>
+
+            <!-- Tooltip -->
+            <div id="nvts-tooltip"
+              class="absolute top-[50px] right-[50px] bg-[#f18b11] text-black px-4 py-2 rounded font-black text-xs opacity-0 transform translate-y-4">
+              May 1st Price: $17.45 | YTD Net Chg: +144.40%
+            </div>
+
+            <div
+              class="absolute bottom-6 left-8 flex flex-col gap-3 text-[9px] uppercase font-black tracking-widest z-10">
+              <div class="flex items-center gap-2"><span class="w-3 h-3 bg-[#f18b11] rounded-full"></span> <span
+                  class="text-white">Navitas Semiconductor</span></div>
+              <div class="flex items-center gap-2"><span class="w-3 h-3 bg-white rounded-full"></span> <span
+                  class="text-white/40">Russell 2000 Semiconductor Group</span></div>
+              <div class="flex items-center gap-2"><span class="w-3 h-3 bg-[#2f8fe3] rounded-full"></span> <span
+                  class="text-white/40">Russell 2000 Index</span></div>
+            </div>
+
+            <!-- Source Label -->
+            <div class="absolute bottom-2 right-6 text-[#666]/50 font-sans text-[9px] font-bold uppercase tracking-[1px] pointer-events-none">
+              Source: data compiled by Bloomberg
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Core Narrative (The Bloomberg Four) -->
+    <section class="relative bg-[#f2ebdf] py-32 px-6 border-t border-black/10 z-20" id="core-narrative-section">
+      <div class="max-w-3xl mx-auto text-[#1a1a1a] text-[18px] md:text-[20px] leading-[1.6] space-y-8 font-normal"
+        style="font-family: Georgia, 'Times New Roman', serif;">
+        <p>Navitas Semiconductor Corp. is the favorite among investors betting on the next phase of the
+          artificial-intelligence boom. It generates less than $50 million in annual revenue and is valued at more than
+          $4 billion — almost 107 times forward sales, compared with about 22 times sales for Nvidia Corp. and about 13
+          times for Advanced Micro Devices Inc., according to data compiled by Bloomberg.</p>
+
+        <p>The Torrance, California-based chipmaker makes power chips that help control how electricity moves through
+          servers. Its main products use gallium nitride, a material designed to convert electricity with less energy
+          loss and heat than traditional silicon. That makes the company relevant to next-generation data centers, where
+          operators are moving toward higher-voltage designs, including 800-volt systems, to deliver more power through
+          crowded server racks.</p>
+
+        <p>That positioning attracts investors who believe the shift to higher-voltage data centers will make Navitas's
+          chips essential. Navitas shares surged about 144% this year, compared with a roughly 13% gain for the Russell
+          2000 Index and a 61% advance for the Russell 2000 semiconductor group, as analysts expect the company to
+          remain unprofitable through at least 2027.</p>
+
+        <p>Within the Russell 2000 semiconductor index, companies tied to how electricity is delivered and managed
+          inside data centers have led gains. Sunnyvale, California-based Alpha & Omega Semiconductor Ltd., a maker of
+          power-control chips, climbed about 102% this year, while Plano, Texas-based Diodes Inc. is up roughly 105%.
+        </p>
+      </div>
+    </section>
+
+    <!-- Slide 3: The Valuation Anomaly -->
+    <section class="relative h-[200vh] bg-[#020302] border-t border-white/5" id="valuation-section">
+      <div class="sticky top-0 h-screen flex items-center justify-center overflow-hidden px-6">
+        <div class="max-w-5xl w-full">
+          <div class="text-center mb-20">
+            <h2 class="text-white/40 text-xs font-black uppercase tracking-[0.4em] mb-4">The Valuation Anomaly</h2>
+            <p class="editorial-headline text-white">The "107x" Reality</p>
+          </div>
+
+          <div class="flex items-end justify-center gap-8 md:gap-16 h-[50vh] border-b border-white/10 pb-2">
+            <!-- AMD -->
+            <div class="flex flex-col items-center justify-end h-full group w-24">
+              <div id="bar-amd" class="w-full bg-slate-500/40 rounded-t-lg" style="height: 12%;"></div>
+              <p class="text-white/40 text-[10px] font-black mt-4 tracking-widest">AMD</p>
+              <p class="text-white text-sm font-bold">12.5x</p>
+            </div>
+            <!-- NVIDIA -->
+            <div class="flex flex-col items-center justify-end h-full group w-24">
+              <div id="bar-nvda" class="w-full bg-[#2f8fe3] rounded-t-lg shadow-[0_0_20px_rgba(47,143,227,0.3)]"
+                style="height: 22%;"></div>
+              <p class="text-[#2f8fe3] text-[10px] font-black mt-4 tracking-widest uppercase">Nvidia</p>
+              <p class="text-white text-sm font-bold">22.4x</p>
+            </div>
+            <!-- NVTS -->
+            <div class="flex flex-col items-center justify-end h-full group w-32">
+              <div id="bar-nvts"
+                class="w-full bg-gradient-to-t from-[#f18b11] to-[#ffcc33] rounded-t-lg shadow-[0_0_40px_rgba(241,139,17,0.5)]"
+                style="height: 100%;"></div>
+              <p class="text-[#f18b11] text-[10px] font-black mt-4 tracking-widest uppercase">Navitas</p>
+              <p class="text-white text-xl font-black italic">107.4x</p>
+            </div>
+          </div>
+
+          <div class="mt-12 max-w-2xl mx-auto text-center">
+            <p class="text-white/60 text-lg leading-relaxed">
+              At <span class="text-white font-bold">107.4x forward sales</span>, Navitas is priced not as a component
+              maker, but as a grid-scale AI bottleneck.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Power Constraint Deep Dive -->
+    <section class="relative bg-[#f2ebdf] py-32 px-6 z-20" id="power-constraint-section">
+      <div class="max-w-3xl mx-auto text-[#1a1a1a] text-[18px] md:text-[20px] leading-[1.6] space-y-8 font-normal"
+        style="font-family: Georgia, 'Times New Roman', serif;">
+
+        <!-- Sub-headline Quote -->
+        <p class="font-serif text-[24px] md:text-[28px] font-medium leading-snug italic text-[#111]">
+          "Power is our single biggest constraint," Amazon.com Inc. Chief Executive Officer Andy Jassy said on a
+          second-quarter earnings call last year.
+        </p>
+
+        <p>In other words, companies have the money and the plans, and not enough electricity to plug everything in.</p>
+
+        <p>Data centers consumed about 415 terawatt-hours of electricity globally in 2024, or roughly 1.5% of total demand, according to the International Energy Agency. That figure is projected to reach about 945 terawatt-hours by 2030, more than doubling from current levels and approaching the scale of Japan’s total electricity consumption.</p>
+
+        <!-- Data Masterpiece: Global Power Demand (Interactive Capsule) -->
+        <div
+          class="float-left w-[85vw] md:w-[35vw] bg-[#050605] rounded-xl border border-[#f18b11]/30 shadow-2xl p-8 mr-10 mb-8 relative overflow-hidden group"
+          id="slide4-container">
+          
+          <!-- Background decoration -->
+          <div class="absolute -inset-2 bg-gradient-to-tr from-[#f18b11]/5 to-transparent opacity-30 blur-xl"></div>
+
+          <div class="relative z-10">
+            <h3 class="text-[#f18b11] text-[10px] font-black uppercase tracking-[0.4em] mb-12 text-center" style="font-family: 'Inter', sans-serif;">Global Power Demand</h3>
+
+            <div class="relative flex items-center justify-center h-[350px]" id="masterpiece-content">
+              
+              <!-- Japan Map (Left Side - Pops up) -->
+              <div id="japan-map-container" class="absolute left-0 w-1/2 h-full opacity-0 -translate-x-10 pointer-events-none transition-all duration-700 flex items-center justify-center">
+                <img src="./japan_silhouette.png" 
+                     id="japan-map"
+                     class="w-full h-full object-contain opacity-30"
+                     style="mix-blend-mode: screen;"
+                     alt="Japan Map">
+              </div>
+
+              <!-- The Growth Pillar (Starts Centered) -->
+              <div id="pillar-master-container" class="relative w-16 h-full flex flex-col justify-end transition-all duration-700 z-20">
+                
+                <div class="relative w-full h-full flex flex-col justify-end bg-white/5 rounded-sm overflow-hidden border border-white/5">
+                  <!-- 2030 Label (Top) -->
+                  <div id="label-2030" class="absolute top-4 left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-700 z-40 text-center pointer-events-none">
+                    <p class="text-white text-[9px] font-black uppercase tracking-widest leading-tight">2030 EST</p>
+                    <p class="text-[#f18b11] text-lg font-black leading-none">945</p>
+                    <p class="text-[#f18b11] text-[8px] font-mono font-black uppercase">TWh</p>
+                  </div>
+
+                  <!-- 2030 Growth Segment (Clickable) -->
+                  <div id="pillar-growth" 
+                       class="w-full bg-gradient-to-t from-[#f18b11] to-[#ffcc33] cursor-pointer relative z-20"
+                       style="height: 0%;">
+                  </div>
+
+                  <!-- Glowing Divider -->
+                  <div id="pillar-divider" class="w-full h-1 bg-white shadow-[0_0_15px_#fff] z-30 opacity-0"></div>
+
+                  <!-- 2024 Base Segment -->
+                  <div id="pillar-base" class="w-full h-[40%] bg-[#f18b11] relative z-10 flex flex-col items-center justify-center">
+                    <span class="text-black text-[9px] font-black uppercase leading-none">2024</span>
+                    <span class="text-black text-[14px] font-black">415</span>
+                    <span class="text-black text-[8px] font-mono font-black mt-0.5">TWh</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Interactive Hint & Feedback -->
+            <div class="mt-4 text-center">
+              <p id="japan-hint" class="text-white/20 text-[8px] uppercase font-bold tracking-widest animate-pulse">Click growth to compare with Japan</p>
+            </div>
+            
+            <!-- Institutional Citation -->
+            <div class="mt-12 pt-6 border-t border-white/10">
+              <p class="text-white/40 text-[10px] uppercase font-bold tracking-[1px] leading-relaxed" style="font-family: 'Inter', sans-serif;">
+                SOURCE: INTERNATIONAL ENERGY AGENCY
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p>A single cabinet of servers, about the size of a household refrigerator, may use as much as 1 megawatt of
+          power by 2028, up from about 40 kilowatts in 2023, according to UBS Group AG. Each cabinet would need about 25
+          times more electricity than it does today.</p>
+
+        <p>To handle that increase, data centers are redesigning how electricity is delivered to those machines. Instead
+          of sending power in small amounts and converting it, newer systems move larger amounts of electricity
+          directly, reducing energy loss and the amount of wiring needed. These designs often use higher-voltage power,
+          in some cases around 800 volts, compared with about 48 volts in traditional systems. UBS estimates this can
+          cut wiring by about 45% while delivering significantly more power through the same infrastructure.</p>
+
+        <p>For a large data center, the shift can reduce equipment and power-related costs by hundreds of millions of
+          dollars and as much as $1 billion over time. At the same time, the cost of the components that handle
+          electricity inside each cabinet could rise from about $4,000 today to more than $100,000 in next-generation
+          systems. That is shifting more of the system’s value toward companies that control how electricity is
+          delivered, rather than those that design the computing chips.</p>
+
+      </div>
+    </section>
+
+    <!-- Video Section: The GaN Revolution -->
+    <section id="gan-revolution" class="relative bg-[#020302] pt-24 pb-12 z-20 overflow-hidden border-t border-black/20">
+      <div class="max-w-5xl mx-auto px-6">
+        
+        <!-- Intro Quote -->
+        <h2 class="text-white/90 text-2xl md:text-3xl lg:text-4xl leading-[1.4] font-normal italic mb-16 text-center max-w-4xl mx-auto" style="font-family: Georgia, 'Times New Roman', serif;">
+          "Power conversion in data centers is a game of heat and space. Navitas GaN technology reshapes this at the physical layer."
+        </h2>
+
+        <!-- Glassmorphic Video Container -->
+        <div id="gan-video-container" class="relative rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(241,139,17,0.15)] border border-white/10 bg-black/50 backdrop-blur-md opacity-0 transform translate-y-10">
+          <video src="0504.mp4" autoplay muted loop playsinline class="w-full h-auto block"></video>
+          
+          <!-- Subtle Glow Overlay -->
+          <div class="absolute inset-0 pointer-events-none rounded-2xl ring-1 ring-inset ring-white/10 shadow-[inset_0_0_30px_rgba(241,139,17,0.1)]"></div>
+        </div>
+
+        <!-- Technical Caption -->
+        <div class="mt-8 text-center">
+
+          <p class="text-white/60 text-sm md:text-base font-normal max-w-2xl mx-auto">
+            High-frequency switching shrinks magnetic components, enabling a 100% increase in rack density.
+          </p>
+        </div>
+
+      </div>
+    </section>
+    <!-- Slide 5: The Pre-emptive Cycle -->
+    <section id="preemptive-cycle-section" class="relative bg-cream pt-4 pb-12 z-20 overflow-hidden">
+      <div class="max-w-5xl mx-auto px-6">
+        
+        <!-- Intro Paragraphs -->
+        <div class="max-w-3xl mx-auto mb-16 space-y-6">
+          <p class="text-[#1a1a1a] text-[18px] md:text-[20px] leading-[1.6] font-normal" style="font-family: Georgia, 'Times New Roman', serif;">
+            Power constraints are changing when decisions are made in the buildout of AI infrastructure. Developers can wait years to secure electricity, and key equipment needed to deliver power is also slow to arrive. Large transformers, for example, can take four to five years to deliver, according to UBS.
+          </p>
+          <p class="text-[#1a1a1a] text-[18px] md:text-[20px] leading-[1.6] font-normal" style="font-family: Georgia, 'Times New Roman', serif;">
+            That forces companies to act earlier. On a recent earnings call, Oracle Corp. said it had secured up to 2.8 gigawatts of power supply for future data centers, equivalent to the electricity needs of more than 2 million homes, capacity it does not yet need, for buildings it has not yet built.
+          </p>
+        </div>
+
+        <!-- Unified Infographic Container (Logical Flow) -->
+        <div class="max-w-4xl mx-auto space-y-12">
+          
+          <!-- Step 1: The Pre-emptive Strike -->
+          <div class="relative bg-[#050605] rounded-2xl p-8 border border-white/5 shadow-2xl">
+            <div class="absolute -top-3 left-8 bg-[#f18b11] text-black text-[10px] font-black px-3 py-1 rounded-sm uppercase tracking-widest">Step 01: The Pre-emptive Strike</div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+              <div class="text-center">
+                <p class="text-white/40 font-mono text-[9px] uppercase tracking-widest mb-2">Power Reserved</p>
+                <h4 class="text-white text-4xl font-black font-urbanist">2.8 GW</h4>
+                <p class="text-[#f18b11]/60 text-[9px] uppercase tracking-wider mt-1">Future Centers</p>
+              </div>
+              <div class="text-center border-x border-white/5">
+                <p class="text-white/40 font-mono text-[9px] uppercase tracking-widest mb-2">Equivalent Scale</p>
+                <h4 class="text-white text-4xl font-black font-urbanist">2M+</h4>
+                <p class="text-[#f18b11]/60 text-[9px] uppercase tracking-wider mt-1">Homes Powered</p>
+              </div>
+              <div class="text-center">
+                <p class="text-white/40 font-mono text-[9px] uppercase tracking-widest mb-2">Current Status</p>
+                <h4 class="text-white text-4xl font-black font-urbanist">0</h4>
+                <p class="text-[#f18b11]/60 text-[9px] uppercase tracking-wider mt-1">Buildings Built</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Connector 1 -->
+          <div class="flex justify-center h-12">
+            <div class="w-px h-full bg-gradient-to-b from-[#f18b11] to-white/10"></div>
+          </div>
+
+          <!-- Step 2: The Timeline Collapse -->
+          <div class="relative bg-[#050605] rounded-2xl p-8 border border-white/5 shadow-2xl">
+            <div class="absolute -top-3 left-8 bg-[#f18b11] text-black text-[10px] font-black px-3 py-1 rounded-sm uppercase tracking-widest">Step 02: Sequence Collapse</div>
+            <div class="space-y-12 max-w-2xl mx-auto pt-4">
+              <!-- Previous -->
+              <div class="relative">
+                <p class="text-white/20 font-mono text-[9px] uppercase tracking-widest mb-6">Traditional Cycle: Demand follows construction</p>
+                <div class="flex items-center justify-between w-full h-px bg-white/10 relative px-4">
+                  <div class="w-10 h-10 bg-white/5 rounded-full border border-white/10 flex items-center justify-center text-[8px] text-white/30 font-mono uppercase">Orders</div>
+                  <div class="w-10 h-10 bg-white/5 rounded-full border border-white/10 flex items-center justify-center text-[8px] text-white/30 font-mono uppercase">Revenue</div>
+                  <div class="w-10 h-10 bg-white/5 rounded-full border border-white/10 flex items-center justify-center text-[8px] text-white/30 font-mono uppercase">Stock</div>
+                </div>
+              </div>
+
+              <!-- Current -->
+              <div class="relative">
+                <p class="text-[#f18b11] font-mono text-[9px] uppercase tracking-widest mb-6">AI Cycle: Decisions precede construction</p>
+                <div class="flex items-center w-full h-px bg-[#f18b11]/10 relative px-4" id="current-timeline-track">
+                  <div class="bubble-current absolute left-0 w-12 h-12 bg-[#f18b11] rounded-full shadow-[0_0_20px_rgba(241,139,17,0.4)] flex items-center justify-center text-[8px] text-black font-black uppercase z-30 transform -translate-y-1/2 top-1/2">Orders</div>
+                  <div class="bubble-current absolute left-[45%] w-12 h-12 bg-[#f18b11] rounded-full shadow-[0_0_20px_rgba(241,139,17,0.4)] flex items-center justify-center text-[8px] text-black font-black uppercase z-20 transform -translate-y-1/2 top-1/2">Revenue</div>
+                  <div class="bubble-current absolute left-[90%] w-12 h-12 bg-[#f18b11] rounded-full shadow-[0_0_20px_rgba(241,139,17,0.4)] flex items-center justify-center text-[8px] text-black font-black uppercase z-10 transform -translate-y-1/2 top-1/2">Stock</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Connector 2 -->
+          <div class="flex justify-center h-12">
+            <div class="w-px h-full bg-gradient-to-b from-[#f18b11] to-white/10"></div>
+          </div>
+
+          <!-- Step 3: The 5-Year Lock-In -->
+          <div class="relative bg-[#050605] rounded-2xl p-8 border border-white/5 shadow-2xl">
+            <div class="absolute -top-3 left-8 bg-[#f18b11] text-black text-[10px] font-black px-3 py-1 rounded-sm uppercase tracking-widest">Step 03: Decision Lock-In</div>
+            <div class="max-w-2xl mx-auto space-y-8 pt-4">
+              <div class="space-y-3">
+                <div class="flex justify-between items-end">
+                  <p class="text-white/80 font-urbanist text-xs font-bold uppercase tracking-wide">Transformers Lead-Time</p>
+                  <p class="text-red-500 font-mono text-[9px] uppercase">4-5 Years</p>
+                </div>
+                <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+                  <div id="bar-transformers" class="h-full bg-red-600 rounded-full w-0"></div>
+                </div>
+              </div>
+
+              <div class="space-y-3 relative">
+                <div class="flex justify-between items-end">
+                  <p class="text-white/80 font-urbanist text-xs font-bold uppercase tracking-wide">Chip Selection Window</p>
+                  <p class="text-blue-400 font-mono text-[9px] uppercase">Locked-in now</p>
+                </div>
+                <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden flex items-center">
+                  <div id="bar-chips" class="h-full bg-blue-500 rounded-full w-0"></div>
+                </div>
+                <div id="navitas-locked-badge" class="absolute right-0 -top-1 opacity-0 transform translate-x-4">
+                  <div class="bg-[#f18b11] text-black text-[8px] font-black px-3 py-1 rounded-sm shadow-[0_0_10px_rgba(241,139,17,0.5)] uppercase">Navitas Locked</div>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                <div class="flex justify-between items-end">
+                  <p class="text-white/80 font-urbanist text-xs font-bold uppercase tracking-wide">Infrastructure Architecture</p>
+                  <p class="text-green-400 font-mono text-[9px] uppercase">Committed</p>
+                </div>
+                <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+                  <div id="bar-oracle" class="h-full bg-green-500 rounded-full w-0"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Takeaway Paragraph -->
+        <div class="max-w-3xl mx-auto mt-16">
+          <p class="text-[#1a1a1a] text-[18px] md:text-[20px] leading-[1.6] font-normal" style="font-family: Georgia, 'Times New Roman', serif;">
+            The same logic extends to chips. Once a company commits to a power architecture, it must also decide which semiconductors will run inside that system, because the two choices are inseparable. That means chip suppliers are being selected at the design stage, sometimes two or three years before a rack ships. In previous cycles, demand appeared first in orders, then in revenue, and finally in stock prices. In the current cycle, the sequence has compressed: by the time construction begins, the supplier list is already set.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Final Section: Investors Price It Early -->
+    <section id="investors-section" class="relative bg-cream pt-0 pb-24 z-20">
+      <div class="max-w-3xl mx-auto px-6">
+        
+        <!-- Reality Gap Dashboard -->
+        <div id="reality-gap-dashboard" class="bg-[#050605] rounded-2xl p-8 md:p-12 border border-white/5 shadow-2xl space-y-12 opacity-0 transform translate-y-10 mb-20">
+          <div class="text-center mb-8 border-b border-white/10 pb-6">
+            <h3 class="text-white font-urbanist text-lg font-black uppercase tracking-[0.3em]">Diagnostic Status Report</h3>
+            <p class="text-white/40 font-mono text-[9px] uppercase mt-2">Subject: Navitas & AI Infrastructure Reality Gap</p>
+          </div>
+
+          <!-- Panel A: Capacity vs Reality -->
+          <div class="space-y-6">
+            <div class="flex justify-between items-center">
+              <span class="text-white/60 font-urbanist text-xs font-bold uppercase tracking-widest">Industry Capacity (2-Year Horizon)</span>
+              <span class="text-amber-500 font-mono text-[10px] font-black">OVERCAPACITY RISK</span>
+            </div>
+            <div class="space-y-4">
+              <div class="space-y-2">
+                <div class="flex justify-between text-[10px] font-mono uppercase text-white/30">
+                  <span>Industry Plans</span>
+                  <span>40+ GW</span>
+                </div>
+                <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                  <div id="dash-bar-plans" class="h-full bg-amber-500/80 rounded-full w-0"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-[10px] font-mono uppercase text-white/30">
+                  <span>UBS Realistic Range</span>
+                  <span>10-15 GW</span>
+                </div>
+                <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                  <div id="dash-bar-realistic" class="h-full bg-white/80 rounded-full w-0"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel B: Double-Ordering Signal -->
+          <div class="bg-white/5 p-6 rounded-xl border border-white/5">
+            <div class="flex justify-between items-start mb-6">
+              <div>
+                <h4 class="text-white font-urbanist text-xs font-black uppercase tracking-widest">The Double-Ordering Signal</h4>
+                <p class="text-white/40 font-mono text-[9px] uppercase mt-1">Munters Group Case Study</p>
+              </div>
+              <div class="bg-red-500/20 text-red-500 text-[8px] font-black px-2 py-1 rounded-sm border border-red-500/30 uppercase tracking-widest">Bubble Alert</div>
+            </div>
+            <div class="flex items-end gap-4 h-24">
+              <div class="flex-1 flex flex-col items-center gap-2">
+                <div id="dash-bar-orders" class="w-full bg-[#f18b11] rounded-t-sm h-0"></div>
+                <span class="text-white font-mono text-[10px]">7x (Orders)</span>
+              </div>
+              <div class="flex-1 flex flex-col items-center gap-2">
+                <div id="dash-bar-shipments" class="w-full bg-white/20 rounded-t-sm h-0"></div>
+                <span class="text-white/40 font-mono text-[10px]">1x (Shipments)</span>
+              </div>
+            </div>
+            <p class="text-center text-white/30 font-mono text-[9px] uppercase tracking-widest mt-6">Demand Fog: Struggle to determine "What's Real Demand"</p>
+          </div>
+
+          <!-- Panel C: The Navitas Countdown -->
+          <div class="space-y-6">
+            <div class="flex justify-between items-end">
+              <div>
+                <h4 class="text-white font-urbanist text-xs font-black uppercase tracking-widest">Navitas Survival Countdown</h4>
+                <p class="text-white/40 font-mono text-[9px] uppercase mt-1">$46M Rev / -$12M Quarterly Loss</p>
+              </div>
+              <div class="text-right">
+                <span class="text-blue-400 font-mono text-[10px] font-black">2027 TARGET</span>
+              </div>
+            </div>
+            <div class="relative pt-6 pb-2">
+              <div class="absolute top-0 left-0 text-red-500 font-mono text-[8px] uppercase font-black">Now</div>
+              <div class="absolute top-0 right-0 text-blue-400 font-mono text-[8px] uppercase font-black">Deployment Window</div>
+              
+              <div class="w-full h-1 bg-white/10 rounded-full relative overflow-hidden">
+                <div id="dash-timeline-burn" class="absolute left-0 h-full bg-red-600 w-0"></div>
+                <div id="dash-timeline-production" class="absolute left-1/2 h-full bg-blue-500 w-0"></div>
+              </div>
+              
+              <div class="flex justify-between mt-4">
+                <div class="text-red-500/60 font-mono text-[8px] uppercase tracking-widest">Phase: Cash Burn</div>
+                <div class="text-blue-400/60 font-mono text-[8px] uppercase tracking-widest text-right">Phase: Revenue Lift</div>
+              </div>
+            </div>
+          </div>
+          <!-- Source Label -->
+          <div class="text-right pt-6 border-t border-white/5">
+            <p class="text-[#666]/50 font-sans text-[8px] font-bold uppercase tracking-[1px] pointer-events-none">
+              Sources: UBS Group AG, Munters Group, and Bank of America Merrill Lynch
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-8 mb-20">
+          <p class="editorial-dropcap text-[#1a1a1a] text-[18px] md:text-[20px] leading-[1.6] font-normal" style="font-family: Georgia, 'Times New Roman', serif;">
+            “The market is starting to price where companies sit in the value chain, rather than what they earn today,” UBS analysts wrote in a recent note.
+          </p>
+          <p class="text-[#1a1a1a] text-[18px] md:text-[20px] leading-[1.6] font-normal" style="font-family: Georgia, 'Times New Roman', serif;">
+            The dynamic helps explain why companies tied to power delivery are attracting attention before revenue has materialized. Nvidia, which is redesigning the electrical plumbing inside its next-generation data-center racks to run on 800 volts of direct current — about six times the voltage of a standard American wall outlet — has named Navitas as one of three chip suppliers for the new system, alongside Texas Instruments and STMicroelectronics.
+          </p>
+          <p class="text-[#1a1a1a] text-[18px] md:text-[20px] leading-[1.6] font-normal" style="font-family: Georgia, 'Times New Roman', serif;">
+            At the same time, demand expectations may be running ahead of reality. UBS estimates that industry plans imply more than 40 gigawatts of new data-center capacity over the next two years, compared with the 10 to 15 gigawatts it considers more realistic.
+          </p>
+          <p class="text-[#1a1a1a] text-[18px] md:text-[20px] leading-[1.6] font-normal" style="font-family: Georgia, 'Times New Roman', serif;">
+            Suppliers are wary of “double ordering,” which means customers placing overlapping orders with multiple suppliers to secure scarce components. Monolithic Power Systems, one of the main suppliers of voltage regulator chips to AI server racks, told investors it was struggling to determine “what's real demand and what may be some double ordering” from customers trying to lock in supply. Munters Group, a maker of data-center cooling equipment, reported orders seven times higher than shipments in a single quarter, but said it could not tell how much of that reflected genuine need.
+          </p>
+          <p class="text-[#1a1a1a] text-[18px] md:text-[20px] leading-[1.6] font-normal" style="font-family: Georgia, 'Times New Roman', serif;">
+            That leaves a gap between expectations and execution and Navitas sits squarely inside it. The company generated about $46 million in revenue over the past year and has been losing more than $12 million per quarter, having abandoned its older business selling chips into smartphones in order to focus entirely on data centers. It expects volume production for 800-volt systems to begin in 2027, the same year Bank of America analysts say large-scale deployment is unlikely to arrive before. The bet investors are making is not that Navitas has already won. It is that the window will open before the money runs out.
+          </p>
+        </div>
+
+
+
+
+
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
